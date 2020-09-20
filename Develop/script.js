@@ -1,34 +1,38 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-
-//add var
-var pwLength;
-var pwLower;
-var pwUpper;
-var pwNum;
-var pwSpec;
-var password;
-
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
   passwordText.value = password;
-
 }
-//add display funct.
+//add functions
 function generatePassword(){
-  //add prompts
-  pwLength = prompt("length of pw");
-  pwLower = prompt("lowercase?");
-  pwUpper = prompt("upper?");
-  pwNum = prompt("numbers?");
-  pwSpec = prompt("special chars?");
-
-  password = "hello";
-  return password;
+  var password = '';
+  var characters = 
+  askLength();
+  askLowercase();
+  askUppercase();
+  askNumber();
+  askSpecChar();
 }
-
+function askLength(){
+  var pwLength = 0;
+  while(pwLength < 8 || pwLength > 128){
+  pwLength = prompt("length of pw");
+  }
+}
+function askLowercase(){
+  var pwLower = confirm("lowercase?");
+}
+function askUppercase(){
+  var pwUpper = confirm("upper?");
+}
+function askNumber(){
+  var pwNum = confirm("numbers?");
+}
+function askSpecChar(){
+  var pwSpec = confirm("special chars?");
+}
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
