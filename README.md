@@ -7,8 +7,8 @@ the user chooses. This password generator can generate a password with lowercase
 uppercase, numbers, and/or special characters. The minimum length of the password is
 8 and the maximum length is 128. Entering a number other than 8 to 128 will ask the user again until a valid number is entered. 
 
-*** Note: This application generates randomly and may or may not include the criterias
-enetered. Re-click *Generate Password* if password does not meet your needs. ***
+***Note: This application generates randomly and may or may not include the criterias
+enetered. Re-click *Generate Password* if password does not meet your needs.***
 
 ## Built With
 
