@@ -31,8 +31,7 @@ function generatePassword(){
   if(specChar === true){
     charList = charList.concat(specCharacters);
   }
-  /*
-  password = characters.concat(lowerChars, numbers);*/
+
   var pwLength = charList.length;
 
   for(var i=0; i<charLength; i++){
@@ -43,24 +42,24 @@ function generatePassword(){
 function askLength(){
   var pwLength = 0;
   while(pwLength < 8 || pwLength > 128){
-  pwLength = prompt("length of pw");
+  pwLength = prompt("Choose a length between 8 and 128: ");
   }
   return pwLength;
 }
 function askLowercase(){
-  var pwLower = confirm("lowercase?");
+  var pwLower = confirm("Would you like lowercase letters in your password?");
   return pwLower;
 }
 function askUppercase(){
-  var pwUpper = confirm("upper?");
+  var pwUpper = confirm("Would you like uppercase letters in your password?");
   return pwUpper;
 }
 function askNumber(){
-  var pwNum = confirm("numbers?");
+  var pwNum = confirm("Would you like numbers in your password?");
   return pwNum;
 }
 function askSpecChar(){
-  var pwSpec = confirm("special chars?");
+  var pwSpec = confirm("Would you like special characters in your password?");
   return pwSpec;
 }
 // Add event listener to generate button
